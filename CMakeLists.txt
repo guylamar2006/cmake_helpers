@@ -4,6 +4,10 @@
 # For license and copyright information please follow this link:
 # https://github.com/desktop-app/legal/blob/master/LEGAL
 
+if(POLICY CMP0167)
+  cmake_policy(SET CMP0167 NEW)
+endif()
+
 add_subdirectory(external)
 if (LINUX AND NOT DESKTOP_APP_DISABLE_JEMALLOC)
     add_subdirectory(linux_jemalloc_helper)
